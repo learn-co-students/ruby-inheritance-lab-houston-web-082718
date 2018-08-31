@@ -13,8 +13,30 @@ avi.first_name = "Avi"
 avi.last_name = "Flombaum"
 
 
-some_knowledge = avi.teach 
+some_knowledge = avi.teach
 
 steve.learn(some_knowledge)
 
 puts "Steve just learned this important knowledge: '#{steve.knowledge.first}' from Avi"
+
+puts "=" * 50
+
+jim = User.new
+jim.first_name = "Jim"
+jim.last_name = "Parsons"
+
+# jim.learn(some_knowledge)
+# cannot run line 28  bin/time_for_school:28:in `<main>': undefined method `learn' for #<User:0x007fef7d12b398 @first_name="Jim", @last_name="Parsons"> (NoMethodError)
+
+new_knowledge = avi.teach
+steve.learn(new_knowledge)
+
+kim = Student.new
+kim.first_name = "Kim"
+kim.last_name = "Pham"
+
+more_knowledge = avi.teach
+kim.learn(more_knowledge)
+
+puts "Steve just learned this important knowledge: '#{steve.knowledge}' from Avi"
+puts "Kim just learned this important knowledge: '#{kim.knowledge.first}' from Avi"
